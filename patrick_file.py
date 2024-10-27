@@ -78,8 +78,3 @@ def analyze_fitbit_activity(patient_id_directory : Path) -> bool:
         return True
     else:
         return False
-
-# Example usage:
-result = analyze_activity_improvement_with_regression('./1503960366')
-print(result)
-
