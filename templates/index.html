@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dev UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dev UI</h1>
+      <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" id="file-input" style="display: none;" />
+        <button id="upload-button">Upload File</button>
+      </form>
+      <form id="notification-form">
+        <input id="notification-button" type="button" value="Send Test Notification" id="notification-button">
+      </form>
+      <div id="message"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
