@@ -72,8 +72,8 @@ def send_test_notification():
 
             notification = generate_notification_with_examples(data)
 
-            query = "INSERT INTO feedback (user_id, message) VALUES (?, ?)"
-            cursor.execute(query, (USER_ID, notification))
+            query = "INSERT INTO feedback (user_id, message, increase) VALUES (?, ?, ?)"
+            cursor.execute(query, (USER_ID, notification, False)) #False replaced with analysis later (hacky fix)
             conn.commit()
 
             return {"message":notification}

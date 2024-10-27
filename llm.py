@@ -21,4 +21,6 @@ def generate_notification_with_examples(examples):
         stream=False
     )
 
-    return response.complete_response
+    print(response)
+
+    return str(response.choices[0].message.content)
